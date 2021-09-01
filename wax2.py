@@ -39,10 +39,10 @@ def main():
     setup()
     print("setup() done\n")
 
-        moveLeft()
-        time.sleep(4)
-        moveRight()
-        time.sleep(4)
+    moveLeft()
+    time.sleep(4)
+    moveRight()
+    time.sleep(4)
     
     print("tearing down...\n")
     teardown()
