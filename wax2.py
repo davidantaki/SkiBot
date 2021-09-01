@@ -35,7 +35,9 @@ def moveRight():
     gpio.output(8, gpio.HIGH)
 
 def main():
+    print("Running...\n")
     setup()
+    print("setup() done\n")
 
     while True:
         moveLeft()
@@ -43,7 +45,9 @@ def main():
         moveRight()
         time.sleep(4)
     
+    print("tearing down...\n")
     teardown()
+    print("teardown() down\n")
 
 
 if __name__ == "__main__":
