@@ -39,7 +39,6 @@ def main():
     setup()
     print("setup() done\n")
 
-    while True:
         moveLeft()
         time.sleep(4)
         moveRight()
