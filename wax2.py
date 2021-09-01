@@ -46,7 +46,7 @@ def main():
     teardown()
 
 
-
-
+if __name__ == "__main__":
+    main()
 
 
