@@ -11,12 +11,12 @@ def setup():
     gpio.setmode(gpio.BOARD)
 
     # motor1
-    gpio.setup(3, gpio.OUT, gpio.LOW)   #M1A
-    gpio.setup(5, gpio.OUT, gpio.LOW)	#M1B
+    gpio.setup(3, gpio.OUT, initial=gpio.LOW)   #M1A
+    gpio.setup(5, gpio.OUT, initial=gpio.LOW)	#M1B
 
     # motor2
-    gpio.setup(7, gpio.OUT, gpio.LOW)	#M2A
-    gpio.setup(8, gpio.OUT, gpio.LOW)	#M2B
+    gpio.setup(7, gpio.OUT, initial=gpio.LOW)	#M2A
+    gpio.setup(8, gpio.OUT, initial=gpio.LOW)	#M2B
 
 def teardown():
     gpio.cleanup()
