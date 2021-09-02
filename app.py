@@ -17,6 +17,9 @@ def move(moveDir):
         waxing_control.moveLeft()
     if moveDir == "moveright":
         waxing_control.moveRight()
+    if moveDir == "movestop":
+        waxing_control.moveStop()
+
     return render_template('index.html')
 
 if __name__ == '__main__':

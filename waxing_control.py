@@ -32,6 +32,12 @@ def moveRight():
     gpio.output(5, gpio.HIGH)
     gpio.output(8, gpio.HIGH)
 
+def moveStop():
+    gpio.output(3, gpio.LOW)
+    gpio.output(7, gpio.LOW)    
+    gpio.output(5, gpio.LOW)
+    gpio.output(8, gpio.LOW)
+
 def main():
     print("Running...\n")
     setup()
