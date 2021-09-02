@@ -4,8 +4,6 @@
 import RPi.GPIO as gpio
 import time
 
-
-
 def setup():
     freq = 10000
     gpio.setmode(gpio.BOARD)
