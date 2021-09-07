@@ -1,19 +1,38 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Button, ButtonGroup } from "@blueprintjs/core";
 
-class App extends Component {
+import "@blueprintjs/core/lib/css/blueprint.css";
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      btnPressed: false
+    }
+  }
+
+  handleMouseUpEvent = (event) => {
+    console.log("Mouse Up");
+  }
+
+  handleMouseDownEvent = (event) => {
+    console.log("Mouse Down");
+  }
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <ButtonGroup>
+        <Button
+          text="Left"
+          onMouseDown={this.handleMouseDownEvent}
+          onMouseUp={this.handleMouseUpEvent} />
+        <Button
+          text="Right"
+          onMouseDown={this.handleMouseDownEvent}
+          onMouseUp={this.handleMouseUpEvent} />
+      </ButtonGroup>
     );
   }
 }
