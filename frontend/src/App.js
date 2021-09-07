@@ -13,12 +13,40 @@ class App extends React.Component {
     }
   }
 
-  handleMouseUpEvent = (event) => {
-    console.log("Mouse Up");
+  handleMoveLeftEvent = (event) => {
+    console.log("Mouse Down");
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ "moveDir": 'moveLeft' })
+    }
+    fetch('/move', options);
   }
 
-  handleMouseDownEvent = (event) => {
+  handleMoveRightEvent = (event) => {
     console.log("Mouse Down");
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ "moveDir": 'moveRight' })
+    }
+    fetch('/move', options);
+  }
+
+  handleMouseUpEvent = (event) => {
+    console.log("Mouse Up");
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ "moveDir": 'moveStop' })
+    }
+    fetch('/move', options);
   }
 
   render() {
@@ -26,11 +54,11 @@ class App extends React.Component {
       <ButtonGroup>
         <Button
           text="Left"
-          onMouseDown={this.handleMouseDownEvent}
+          onMouseDown={this.handleMoveLeftEvent}
           onMouseUp={this.handleMouseUpEvent} />
         <Button
           text="Right"
-          onMouseDown={this.handleMouseDownEvent}
+          onMouseDown={this.handleMoveRightEvent}
           onMouseUp={this.handleMouseUpEvent} />
       </ButtonGroup>
     );
