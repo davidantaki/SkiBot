@@ -1,4 +1,5 @@
 import React from 'react';
+import { Pressable, Text, View, StyleSheet } from 'react-native'
 import logo from './logo.svg';
 import './App.css';
 import { Button, ButtonGroup } from "@blueprintjs/core";
@@ -51,18 +52,52 @@ class App extends React.Component {
 
   render() {
     return (
-      <ButtonGroup>
-        <Button
-          text="Left"
-          onMouseDown={this.handleMoveLeftEvent}
-          onMouseUp={this.handleMouseUpEvent} />
-        <Button
-          text="Right"
-          onMouseDown={this.handleMoveRightEvent}
-          onMouseUp={this.handleMouseUpEvent} />
-      </ButtonGroup>
+      <View style={styles.container}>
+        <ButtonGroup>
+          <Pressable
+            onPressIn={this.handleMoveLeftEvent}
+            onPressOut={this.handleMouseUpEvent}>
+            <Button
+              text="Left"
+              // onMouseDown={this.handleMoveLeftEvent}
+              // onMouseUp={this.handleMouseUpEvent}
+              />
+          </Pressable>
+          <Pressable
+            onPressIn={this.handleMoveRightEvent}
+            onPressOut={this.handleMouseUpEvent}>
+            <Button
+              text="Right"
+              // onMouseDown={this.handleMoveRightEvent}
+              // onMouseUp={this.handleMouseUpEvent}
+              />
+          </Pressable>
+        </ButtonGroup>
+      </View>
+
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+  },
+  text: {
+    fontSize: 16
+  },
+  wrapperCustom: {
+    borderRadius: 8,
+    padding: 6
+  },
+  logBox: {
+    padding: 20,
+    margin: 10,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: '#f0f0f0',
+    backgroundColor: '#f9f9f9'
+  }
+});
 
 export default App;
