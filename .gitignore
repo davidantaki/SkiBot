@@ -1,3 +1,4 @@
 __pycache__/
 waxrobot-venv/
 .vscode/
+frontend/node_modules/
