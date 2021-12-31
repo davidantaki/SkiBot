@@ -15,12 +15,12 @@ import adafruit_vl6180x
 # M2Bpin = 8
 
 # BCM Pin definitions
-SCL1 = 3
-SDA1 = 2
-M1Apin = 15
-M1Bpin = 18
-M2Apin = 4
-M2Bpin = 14
+SCL1 = 3    # pin 5
+SDA1 = 2    # pin 3 
+M1Apin = 15 # pin 10
+M1Bpin = 18 # pin 12
+M2Apin = 4  # pin 7
+M2Bpin = 14 # pin 8
 
 i2c1Bus = None
 
