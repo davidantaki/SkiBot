@@ -82,8 +82,8 @@ one reading (kg):       1.97527 | average (kg): 2.16011
 one reading (kg):       1.87148 | average (kg): 1.85821
 one reading (kg):       1.82875 | average (kg): 1.91017
 one reading (kg):       1.82765 | average (kg): 3.69953
-one reading (kg):       7.58086 | average (kg): 8.61309
 one reading (kg):       3.07422 | average (kg): 4.51211
+one reading (kg):       7.58086 | average (kg): 8.61309
 one reading (kg):       9.06155 | average (kg): 10.48512
 one reading (kg):       11.03238        | average (kg): 10.78909
 one reading (kg):       10.87181        | average (kg): 7.89792
