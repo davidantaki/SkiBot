@@ -15,10 +15,10 @@ DRV8825 stepper(MOTOR_STEPS, DIR, STEP, ENABLE, MS1, MS2, MS3);
 void setup() {
   // Set target motor RPM to 1RPM and microstepping to 1 (full step mode)
   stepper.begin(100, 1);
-  // stepper.(1000);
+  stepper.setEnableActiveState(LOW);
   Serial.begin(115200);
   delay(2000);
-  Serial.println("Hello World!");
+  Serial.println("Setup!");
 }
 
 void loop() {
@@ -27,7 +27,9 @@ void loop() {
   // digitalWrite(A4, HIGH);
   Serial.println("loop");
   // stepper.rotate(10000);
-  stepper.move(10000);
+  stepper.enable();
+  stepper.move(360);
+  stepper.disable();
   delay(10000);
   // Serial.println(digitalRead(A5));
   // digitalWrite(A4, LOW);
