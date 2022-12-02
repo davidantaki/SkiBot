@@ -1,0 +1,2 @@
+﻿"iron_handle_width" = 31.5mm
+"iron_handle_thickness" = 14.5mm

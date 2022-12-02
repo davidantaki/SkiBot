@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CPTemplate>
+  <AppVersion>26</AppVersion>
+  <CPSheet>
+    <GroupBox Label="Part Properties" PropName="Groupbox2" DefaultState="Expanded">
+      <Control Label="iron_handle_width" PropName="number" ApplyTo="Config" Type="TextBox" ReadOnly="False" DefaultValue="35.5mm" Mode="Text" />
+    </GroupBox>
+  </CPSheet>
+</CPTemplate>
